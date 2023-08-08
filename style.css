@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+canvas {
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #858585;
+    z-index: 1;
+    padding: 10px;
+}
+
+.toolbar:hover{
+   cursor: move; 
+}
+
+.toolbar button {
+    margin: 5px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.toolbar button:hover {
+    background-color: #d0d0d0;
+}
+
+.color{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.color:hover{
+    border: 2px solid black;
+}
+
+.color:active{
+    border: 2px solid black;
+    scale: 1.2;
+}
+
+.active{
+    border: 2px solid black;
+    scale: 1.5;
+}

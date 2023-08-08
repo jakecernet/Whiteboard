@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Simple Drawing Canvas</title>
+</head>
+
+<body>
+    <canvas id="drawingCanvas"></canvas>
+    <div class="toolbar" id="toolbar" draggable="true" ondrag="dragToolbar()">
+        <button onclick="clearCanvas()">Clear</button>
+        <button onclick="saveCanvas()">Save</button>
+        <div class="colors">
+            <button class="color" id="black" style="background-color: black;" onclick="setColor('black')"></button>
+            <button class="color" id="red" style="background-color: red;" onclick="setColor('red')"></button>
+            <button class="color" id="green" style="background-color: green;" onclick="setColor('green')"></button>
+            <button class="color" id="blue" style="background-color: blue;" onclick="setColor('blue')"></button>
+            <button class="color" id="yellow" style="background-color: yellow;" onclick="setColor('yellow')"></button>
+            <button class="color" id="orange" style="background-color: orange;" onclick="setColor('orange')"></button>
+            <button class="color" id="purple" style="background-color: purple;" onclick="setColor('purple')"></button>
+            <button class="color" id="pink" style="background-color: pink;" onclick="setColor('pink')"></button>
+            <button class="color" id="brown" style="background-color: brown;" onclick="setColor('brown')"></button>
+            <button class="color" id="white" style="background-color: white;" onclick="setColor('white')"></button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

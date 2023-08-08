@@ -20,13 +20,19 @@ canvas {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #858585;
+    background: linear-gradient(to bottom, rgba(161, 161, 161, 0.137), rgba(80, 80, 80, 0.5));
     z-index: 1;
     padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
 }
 
 .toolbar:hover{
-   cursor: move; 
+   cursor: grab; 
+}
+
+.toolbar:active{
+    cursor: grabbing;
 }
 
 .toolbar button {
@@ -34,8 +40,10 @@ canvas {
     padding: 5px;
     border: none;
     border-radius: 5px;
-    background-color: #f0f0f0;
+    background: linear-gradient(to top, rgba(161, 161, 161, 0.137), rgba(129, 129, 129, 0.568));
     cursor: pointer;
+    transition: 0.3s ease;
+    border: 1px solid black;
 }
 
 .toolbar button:hover {
@@ -48,14 +56,14 @@ canvas {
     border-radius: 50%;
     margin: 5px;
     cursor: pointer;
+    transition: 0.3s ease;
 }
 
 .color:hover{
-    border: 2px solid black;
+    scale: 1.1;
 }
 
 .color:active{
-    border: 2px solid black;
     scale: 1.2;
 }
 

@@ -77,6 +77,12 @@ function dragToolbar() {
         toolbar.style.left = e.clientX + "px";
     }
 
+    //prevent the toolbar from being dragged when clicking on the buttons
+    toolbar.addEventListener("click", function (e) {
+        e.stopPropagation();
+    }
+        , false);
+
     //prevent the toolbar from being dragged when clicking on the canvas
     canvas.addEventListener("click", function (e) {
         e.stopPropagation();

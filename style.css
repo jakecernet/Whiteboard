@@ -18,8 +18,8 @@ canvas {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 40%;
+    left: 40%;
     background: linear-gradient(to bottom, rgba(161, 161, 161, 0.137), rgba(80, 80, 80, 0.5));
     z-index: 1;
     padding: 10px;
@@ -70,4 +70,26 @@ canvas {
 .active{
     border: 2px solid black;
     scale: 1.5;
+}
+
+.size{
+    margin: 5px;
+    padding: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    padding: 5px;
+    font-size: 15px;
+    color: #a0a0a0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer a{
+    color: #a0a0a0;
+    text-decoration: none;
 }

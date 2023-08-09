@@ -16,6 +16,7 @@ function endPosition() {
 }
 
 ctx.strokeStyle = "black";
+ctx.lineWidth = 5;
 
 function setColor(color) {
     ctx.strokeStyle = color;
@@ -31,10 +32,23 @@ function setColor(color) {
     }
 }
 
+function setSize(size) {
+    ctx.lineWidth = size;
+    activeButton = document.getElementsByClassName(size);
+    activeButton.classList.add("active");
+
+    //remove active class from all other buttons
+    var buttons = document.getElementsByClassName("sizes");
+    for (var i = 0; i < buttons.length; i++) {
+        if (buttons[i].id != size) {
+            buttons[i].classList.remove("active");
+        }
+    }
+}
+
 function draw(e) {
     if (!painting) return;
 
-    ctx.lineWidth = 5;
     ctx.lineCap = "round";
 
     ctx.lineTo(e.clientX, e.clientY);

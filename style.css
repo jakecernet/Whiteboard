@@ -8,8 +8,8 @@ body {
 }
 
 canvas {
-    border: 2px solid black;
     border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 .toolbar {
@@ -20,37 +20,37 @@ canvas {
     position: absolute;
     top: 40%;
     left: 40%;
-    background: linear-gradient(to bottom, rgba(161, 161, 161, 0.137), rgba(80, 80, 80, 0.5));
+    background: rgba(129, 129, 129, 0.568);
     z-index: 1;
-    padding: 10px;
+    padding: 12px;
     border-radius: 5px;
-    border: 1px solid black;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
 }
 
-.toolbar:hover{
-   cursor: grab; 
+.toolbar:hover {
+    cursor: grab;
 }
 
-.toolbar:active{
+.toolbar:active {
     cursor: grabbing;
 }
 
 .toolbar button {
     margin: 5px;
-    padding: 5px;
+    padding: 10px;
     border: none;
     border-radius: 5px;
-    background: linear-gradient(to top, rgba(161, 161, 161, 0.137), rgba(129, 129, 129, 0.568));
+    background-color: #e0e0e0;
     cursor: pointer;
     transition: 0.3s ease;
-    border: 1px solid black;
 }
 
 .toolbar button:hover {
     background-color: #d0d0d0;
 }
 
-.color{
+.color {
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -59,27 +59,24 @@ canvas {
     transition: 0.3s ease;
 }
 
-.color:hover{
-    scale: 1.1;
+.color:hover,
+.color:active {
+    scale: 1.6;
 }
 
-.color:active{
-    scale: 1.2;
-}
-
-.active{
+.active {
     border: 2px solid black;
     scale: 1.5;
 }
 
-.size{
+#sizes button {
     margin: 5px;
     padding: 15px;
     cursor: pointer;
     transition: 0.3s ease;
 }
 
-.footer{
+.footer {
     position: absolute;
     bottom: 0;
     right: 20px;
@@ -89,7 +86,7 @@ canvas {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.footer a{
+.footer a {
     color: #a0a0a0;
     text-decoration: none;
 }
